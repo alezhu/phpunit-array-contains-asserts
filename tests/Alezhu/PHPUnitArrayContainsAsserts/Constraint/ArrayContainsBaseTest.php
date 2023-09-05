@@ -49,7 +49,7 @@ class TestArrayAccess implements ArrayAccess
         return isset($this->array[$offset]);
     }
 
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return $this->array[$offset];
     }
