@@ -2,10 +2,10 @@ name: PHPUnit 8
 
 on:
   push:
-    branches: [ "PHPUnit_8'" ]
+    branches: [ "PHPUnit_8" ]
     tags: [ "8.*","v8.*" ]
   pull_request:
-    branches: [ "PHPUnit_8'" ]
+    branches: [ "PHPUnit_8" ]
     tags: [ "8.*","v8.*" ]
 
 permissions:
