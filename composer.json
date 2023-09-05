@@ -1,0 +1,39 @@
+{
+  "name": "alezhu/phpunit-array-contains-asserts",
+  "type": "library",
+  "description": "Provides PHPUnit assertions to test array contains data or structure",
+  "keywords": [
+    "php",
+    "phpunit",
+    "phpunit-extension",
+    "phpunit-assertions"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexandr Zhuravlev",
+      "homepage": "https://github.com/alezhu"
+    }
+  ],
+  "support": {
+    "docs": "https://github.com/alezhu/phpunit-array-contains-asserts",
+    "issues": "https://github.com/alezhu/phpunit-array-contains-assertsissues",
+    "source": "https://github.com/alezhu/phpunit-array-contains-asserts"
+  },
+  "autoload": {
+    "psr-4": {
+      "Alezhu\\PHPUnitArrayContainsAsserts\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Alezhu\\PHPUnitArrayContainsAsserts\\Tests\\": "tests"
+    }
+  },
+  "require": {
+    "php": ">=7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8"
+  }
+}
