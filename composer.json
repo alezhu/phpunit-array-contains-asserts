@@ -31,10 +31,10 @@
     }
   },
   "require": {
-    "php": "~7.2.0"
+    "php": "~7.3.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^8"
+    "phpunit/phpunit": "^9"
   },
   "scripts": {
     "test": "vendor/bin/phpunit tests --coverage-html coverage --coverage-clover coverage.xml"
