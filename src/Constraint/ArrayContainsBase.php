@@ -24,24 +24,24 @@ abstract class ArrayContainsBase extends Constraint
     /**
      * @var iterable|array
      */
-    protected $subset;
+    protected mixed $subset;
 
     /**
      * @var bool
      */
-    protected $strict;
+    protected bool $strict;
 
     /**
      * @param array $subset
      * @param bool $strict
      */
-    public function __construct(array $subset, bool $strict = false)
+    public function __construct(mixed $subset, bool $strict = false)
     {
         $this->subset = $subset;
         $this->strict = $strict;
     }
 
-    protected function _isAssocArray($array): bool
+    protected function _isAssocArray(mixed $array): bool
     {
         if (is_array($array)) {
             return !array_is_list($array);
@@ -68,7 +68,7 @@ abstract class ArrayContainsBase extends Constraint
         throw new AssertionFailedError('Not supported type');
     }
 
-    protected function _toArray($value)
+    protected function _toArray(mixed $value): array
     {
         if (is_array($value)) return $value;
         if ($value instanceof ArrayObject) {

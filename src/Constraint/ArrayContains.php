@@ -11,14 +11,14 @@ use SebastianBergmann\Comparator\ComparisonFailure;
 
 class ArrayContains extends ArrayContainsBase
 {
-    protected $other_array;
+    protected array $other_array;
 
     public function toString(): string
     {
         return 'is contains expected values or key-value pairs';
     }
 
-    protected function _matchAssoc($other): bool
+    protected function _matchAssoc(mixed $other): bool
     {
         foreach ($this->subset as $key => $value) {
             if (!array_key_exists($key, $this->other_array)) {
@@ -37,7 +37,7 @@ class ArrayContains extends ArrayContainsBase
         return true;
     }
 
-    protected function _matchUnAssoc($other): bool
+    protected function _matchUnAssoc(mixed $other): bool
     {
         $flip_fail = false;
         set_error_handler(function () use (&$flip_fail) {

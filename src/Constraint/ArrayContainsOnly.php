@@ -6,7 +6,7 @@ use SebastianBergmann\Comparator\ComparisonFailure;
 
 class ArrayContainsOnly extends ArrayContains
 {
-    protected function _matchAssoc($other): bool
+    protected function _matchAssoc(mixed $other): bool
     {
         $result = parent::_matchAssoc($other);
         if ($result) {
@@ -15,13 +15,13 @@ class ArrayContainsOnly extends ArrayContains
                 if (!array_key_exists($key, $subset)) {
                     $failure = new ComparisonFailure($this->subset, $other, var_export($this->subset, true), var_export($other, true));
                     $this->fail($other, "Actual data contains unexpected keys: ($key)", $failure);
-                };
+                }
             }
         }
         return $result;
     }
 
-    protected function _matchUnAssoc($other): bool
+    protected function _matchUnAssoc(mixed $other): bool
     {
         $result = parent::_matchUnAssoc($other);
         if ($result) {
