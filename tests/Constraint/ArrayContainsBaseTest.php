@@ -1,6 +1,6 @@
 <?php
 
-namespace Alezhu\PHPUnitArrayContainsAsserts\Constraint\Tests;
+namespace Alezhu\PHPUnitArrayContainsAsserts\Tests\Constraint;
 
 use Alezhu\PHPUnitArrayContainsAsserts\Constraint\ArrayContainsBase;
 use ArrayAccess;
@@ -20,7 +20,7 @@ class TestArrayContains extends ArrayContainsBase
         return parent::_isAssocArray($array);
     }
 
-    public function toArray($value)
+    public function toArray($value): array
     {
         return parent::_toArray($value);
     }
@@ -35,7 +35,7 @@ class TestArrayContains extends ArrayContainsBase
 
 class TestArrayAccess implements ArrayAccess
 {
-    protected $array;
+    protected array $array;
 
     public function __construct(
         $array = []
@@ -204,7 +204,7 @@ class ArrayContainsBaseTest extends TestCase
         $value = "1,2,3";
         $this->expectException(AssertionFailedError::class);
         $this->expectExceptionMessage('Not supported type');
-        $result = $instance->toArray($value);
+        $instance->toArray($value);
 
     }
 }

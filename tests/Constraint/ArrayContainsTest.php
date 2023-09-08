@@ -1,6 +1,6 @@
 <?php
 
-namespace Alezhu\PHPUnitArrayContainsAsserts\Constraint\Tests;
+namespace Alezhu\PHPUnitArrayContainsAsserts\Tests\Constraint;
 
 use Alezhu\PHPUnitArrayContainsAsserts\Constraint\ArrayContains;
 use PHPUnit\Framework\AssertionFailedError;
