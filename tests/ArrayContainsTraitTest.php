@@ -22,7 +22,7 @@ class ArrayContainsTraitTest extends TestCase
     public function test_assertArrayContains_should_raise_exception_if_passed_not_array_like_subset()
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage("Argument #1 must be array or ArrayAccess or Iterator");
+        $this->expectExceptionMessage("Argument #1 of Alezhu\PHPUnitArrayContainsAsserts\Assert::assertArrayContains() must be an array or ArrayAccess or Iterator");
 
         Assert::assertArrayContains("string", []);
     }
@@ -30,7 +30,7 @@ class ArrayContainsTraitTest extends TestCase
     public function test_assertArrayContains_should_raise_exception_if_passed_not_array_like_actual()
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage("Argument #2 must be array or ArrayAccess or Iterator");
+        $this->expectExceptionMessage("Argument #2 of Alezhu\PHPUnitArrayContainsAsserts\Assert::assertArrayContains() must be an array or ArrayAccess or Iterator");
 
         Assert::assertArrayContains([], "string");
     }
@@ -38,7 +38,7 @@ class ArrayContainsTraitTest extends TestCase
     public function test_assertArrayContainsOnly_should_raise_exception_if_passed_not_array_like_subset()
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage("Argument #1 must be array or ArrayAccess or Iterator");
+        $this->expectExceptionMessage("Argument #1 of Alezhu\PHPUnitArrayContainsAsserts\Assert::assertArrayContainsOnly() must be an array or ArrayAccess or Iterator");
 
         Assert::assertArrayContainsOnly("string", []);
     }
@@ -46,7 +46,7 @@ class ArrayContainsTraitTest extends TestCase
     public function test_assertArrayContainsOnly_should_raise_exception_if_passed_not_array_like_actual()
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage("Argument #2 must be array or ArrayAccess or Iterator");
+        $this->expectExceptionMessage("Argument #2 of Alezhu\PHPUnitArrayContainsAsserts\Assert::assertArrayContainsOnly() must be an array or ArrayAccess or Iterator");
 
         Assert::assertArrayContainsOnly([], "string");
     }
