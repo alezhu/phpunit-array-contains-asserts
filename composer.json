@@ -37,6 +37,8 @@
     "phpunit/phpunit": "^10"
   },
   "scripts": {
-    "test": "vendor/bin/phpunit tests --coverage-html coverage --coverage-clover coverage.xml"
+    "test": "@php vendor/bin/phpunit tests",
+    "coverage": "@test --coverage-html coverage --coverage-clover coverage.xml",
+    "php-version": "@php --version"
   }
 }
