@@ -15,7 +15,7 @@ class ArrayContainsOnly extends ArrayContains
                 if (!array_key_exists($key, $subset)) {
                     $failure = new ComparisonFailure($this->subset, $other, var_export($this->subset, true), var_export($other, true));
                     $this->fail($other, "Actual data contains unexpected keys: ($key)", $failure);
-                };
+                }
             }
         }
         return $result;

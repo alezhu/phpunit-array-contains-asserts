@@ -11,6 +11,13 @@ use PHPUnit\Framework\InvalidArgumentException;
 
 trait ArrayContainsTrait
 {
+    /**
+     * @param $subset
+     * @param $array
+     * @param bool $strict
+     * @param string $message
+     * @return void
+     */
     public static function assertArrayContains($subset, $array, bool $strict = false, string $message = '')
     {
         if (!(is_array($subset) || $subset instanceof ArrayAccess || $subset instanceof Iterator)) {
@@ -30,6 +37,13 @@ trait ArrayContainsTrait
         PhpUnitAssert::assertThat($array, $constraint, $message);
     }
 
+    /**
+     * @param $subset
+     * @param $array
+     * @param bool $strict
+     * @param string $message
+     * @return void
+     */
     public static function assertArrayContainsOnly($subset, $array, bool $strict = false, string $message = '')
     {
         if (!(is_array($subset) || $subset instanceof ArrayAccess || $subset instanceof Iterator)) {
