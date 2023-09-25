@@ -1,5 +1,10 @@
 # PHPUnit arrayContains asserts
 
+[![Latest Stable Version](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/v)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
+[![Total Downloads](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/downloads)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
+[![License](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/license)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
+[![PHP Version Require](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/require/php)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
+
 Provides PHPUnit assertions to test then array-like data contains expected data with expected structure.
 
 This PHPUnit extension was written for PHPUnit 10, but also has branches for PHPUnit 8 and PHPUnit 9 . If it doesn't
