@@ -1,11 +1,17 @@
 # PHPUnit arrayContains asserts
 
-[![Latest Stable Version](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/v)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
+![PHPUnit 10 latest version](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=10.*&label=PHPUnit%2010)
+![PHPUnit 10 build Status](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/php.yml?label=PHPUnit%2010)
+![PHPUnit 9 latest version](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=9.*&label=PHPUnit%209)
+![PHPUnit 9 build Status ](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/phpunit_9.yml?label=PHPUnit%209)
+![PHPUnit 8 latest version](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=8.*&label=PHPUnit%208)
+![PHPUnit 8 build Status ](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/phpunit_8.yml?label=PHPUnit%208)
 [![Total Downloads](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/downloads)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
 [![License](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/license)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
 [![PHP Version Require](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/require/php)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/alezhu/phpunit-array-contains-asserts)
 
-Provides PHPUnit assertions to test then array-like data contains expected data with expected structure.
+Provides PHPUnit assertions to test when array-like data contains expected data with expected structure.
 
 This PHPUnit extension was written for PHPUnit 10, but also has branches for PHPUnit 8 and PHPUnit 9 . If it doesn't
 work properly, please don't hesitate to open
