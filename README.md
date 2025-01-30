@@ -1,11 +1,13 @@
 # PHPUnit arrayContains asserts
 
-[![Latest Stable Version](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/v)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
-[![Total Downloads](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/downloads)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
-[![License](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/license)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
-[![PHP Version Require](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/require/php)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
+![PHPUnit 8 latest version](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=8.*&label=PHPUnit%208)
+![PHPUnit 8 build Status ](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/phpunit_8.yml?label=PHPUnit%208)
+![Total Downloads](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/downloads)
+![License](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/license)
+![PHP Version Require](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/require/php)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/alezhu/phpunit-array-contains-asserts)
 
-Provides PHPUnit assertions to test then array-like data contains expected data with expected structure.
+Provides PHPUnit assertions to test when array-like data contains expected data with expected structure.
 
 This PHPUnit extension was written for PHPUnit 10, but also has branches for PHPUnit 8 and PHPUnit 9 . If it doesn't
 work properly, please don't hesitate to open
@@ -36,15 +38,19 @@ Usage
 There are three (basically equivalent) options to use `PHPUnitArrayAssertions`:
 
 - By using the
-  static [class `Alezhu\PHPUnitArrayContainsAsserts\Assert`](https://github.com/alezhu/phpunit-array-contains-asserts/blob/main/src/Assert.php)
+  static [class
+  `Alezhu\PHPUnitArrayContainsAsserts\Assert`](https://github.com/alezhu/phpunit-array-contains-asserts/blob/main/src/Assert.php)
 - By using
-  the [trait `Alezhu\PHPUnitArrayContainsAsserts\ArrayContainsTrait`](https://github.com/alezhu/phpunit-array-contains-asserts/blob/main/src/ArrayContainsTrait.php)
+  the [trait
+  `Alezhu\PHPUnitArrayContainsAsserts\ArrayContainsTrait`](https://github.com/alezhu/phpunit-array-contains-asserts/blob/main/src/ArrayContainsTrait.php)
   in your test case
 - By creating
-  new [constraint instances](https://github.com/alezhu/phpunit-array-contains-asserts/tree/main/src/Constraint) (`Alezhu\PHPUnitArrayContainsAsserts\Constraint\…`)
+  new [constraint instances](https://github.com/alezhu/phpunit-array-contains-asserts/tree/main/src/Constraint) (
+  `Alezhu\PHPUnitArrayContainsAsserts\Constraint\…`)
 
 All options do the same, the only difference is that the static class and trait both
-throw [class `Alezhu\PHPUnitArrayContainsAsserts\Exception\InvalidArgumentTypeException`](https://github.com/alezhu/phpunit-array-contains-asserts/blob/main/src/Exception/InvalidArgumentTypeException.php) (
+throw [class
+`Alezhu\PHPUnitArrayContainsAsserts\Exception\InvalidArgumentTypeException`](https://github.com/alezhu/phpunit-array-contains-asserts/blob/main/src/Exception/InvalidArgumentTypeException.php) (
 or `PHPUnit\Framework\InvalidArgumentException` for PHPUnit 9 and 8) exceptions for
 invalid parameters.
 Creating new constraint instances is useful for advanced assertions, e.g. together
@@ -52,7 +58,8 @@ with `PHPUnit\Framework\Constraint\LogicalAnd`.
 
 ### Constraint `ArrayContains`
 
-The [`ArrayContains` constraint](https://github.com/alezhu/phpunit-array-contains-asserts/blob/main/src/Constraint/ArrayContains.php)
+The [
+`ArrayContains` constraint](https://github.com/alezhu/phpunit-array-contains-asserts/blob/main/src/Constraint/ArrayContains.php)
 asserts that an array contains all expected values (for non-associative arrays) or all expected keys with expected
 values (for associative arrays).
 
@@ -94,7 +101,8 @@ Assert::assertArrayContains(
 
 ### Constraint `ArrayContainsOnly`
 
-The [`ArrayContainsOnly` constraint](https://github.com/alezhu/phpunit-array-contains-asserts/blob/main/src/Constraint/ArrayContainsOnly.php)
+The [
+`ArrayContainsOnly` constraint](https://github.com/alezhu/phpunit-array-contains-asserts/blob/main/src/Constraint/ArrayContainsOnly.php)
 asserts that an array contains **only** all expected values (for non-associative arrays) or ***only*** all expected keys
 with expected values (for associative arrays).
 
