@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # PHPUnit 11 (compatible with PHP 8.2, 8.3, 8.4)
+          # PHPUnit 11 (compatible with PHP 8.2, 8.3, 8.4, 8.5)
           - branch: main
             php: '8.2'
             phpunit: '11'
@@ -25,8 +25,11 @@ jobs:
           - branch: main
             php: '8.4'
             phpunit: '11'
+          - branch: main
+            php: '8.5'
+            phpunit: '11'
 
-          # PHPUnit 10 (compatible with PHP 8.1, 8.2, 8.3)
+          # PHPUnit 10 (compatible with PHP 8.1, 8.2, 8.3, 8.4)
           - branch: main
             php: '8.1'
             phpunit: '10'
@@ -35,6 +38,9 @@ jobs:
             phpunit: '10'
           - branch: main
             php: '8.3'
+            phpunit: '10'
+          - branch: main
+            php: '8.4'
             phpunit: '10'
 
           # PHPUnit 9 (compatible with PHP 7.3, 7.4, 8.0, 8.1)
