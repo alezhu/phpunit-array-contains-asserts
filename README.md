@@ -1,22 +1,18 @@
 # PHPUnit arrayContains asserts
 
-![PHPUnit 10 latest version](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=10.*&label=PHPUnit%2010)
-![PHPUnit 10 build Status](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/php.yml?label=PHPUnit%2010)
-![PHPUnit 9 latest version](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=9.*&label=PHPUnit%209)
-![PHPUnit 9 build Status ](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/phpunit_9.yml?label=PHPUnit%209)
-![PHPUnit 8 latest version](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=8.*&label=PHPUnit%208)
-![PHPUnit 8 build Status ](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/phpunit_8.yml?label=PHPUnit%208)
-![Total Downloads](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/downloads)
-![License](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/license)
-![PHP Version Require](http://poser.pugx.org/alezhu/phpunit-array-contains-asserts/require/php)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/alezhu/phpunit-array-contains-asserts)
+[![Total Downloads](https://poser.pugx.org/alezhu/phpunit-array-contains-asserts/downloads)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
+[![License](https://poser.pugx.org/alezhu/phpunit-array-contains-asserts/license)](https://packagist.org/packages/alezhu/phpunit-array-contains-asserts)
 
 Provides PHPUnit assertions to test when array-like data contains expected data with expected structure.
 
-This PHPUnit extension was written for PHPUnit 10, but also has branches for PHPUnit 8 and PHPUnit 9 . If it doesn't
-work properly, please don't hesitate to open
-a [new Issue on GitHub](https://github.com/alezhu/phpunit-array-contains-asserts/issues), or, even better, create a Pull
-Request with a proposed fix .
+### Supported PHPUnit Versions & Status
+
+| PHPUnit Version | Latest Package Release | Build Status | Coverage | PHP Version |
+| :--- | :--- | :--- | :--- | :--- |
+| **PHPUnit 11** | [![PHPUnit 11 Tag](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=11.*&label=v11)](https://github.com/alezhu/phpunit-array-contains-asserts/releases/tag/11.0.0) | [![PHPUnit 11 Build Status](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/main.yml?branch=main&label=Build)](https://github.com/alezhu/phpunit-array-contains-asserts/actions/workflows/main.yml) | [![Coverage Status](https://coveralls.io/repos/github/alezhu/phpunit-array-contains-asserts/badge.svg?branch=main)](https://coveralls.io/github/alezhu/phpunit-array-contains-asserts?branch=main) | ![PHP >= 8.2](https://img.shields.io/badge/PHP-%3E%3D%208.2-8892BF) |
+| **PHPUnit 10** | [![PHPUnit 10 Tag](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=10.*&label=v10)](https://github.com/alezhu/phpunit-array-contains-asserts/releases/tag/10.0.5) | [![PHPUnit 10 Build Status](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/main.yml?branch=main&label=Build)](https://github.com/alezhu/phpunit-array-contains-asserts/actions/workflows/main.yml) | [![Coverage Status](https://coveralls.io/repos/github/alezhu/phpunit-array-contains-asserts/badge.svg?branch=main)](https://coveralls.io/github/alezhu/phpunit-array-contains-asserts?branch=main) | ![PHP >= 8.1](https://img.shields.io/badge/PHP-%3E%3D%208.1-8892BF) |
+| **PHPUnit 9** | [![PHPUnit 9 Tag](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=9.*&label=v9)](https://github.com/alezhu/phpunit-array-contains-asserts/tree/PHPUnit_9) | [![PHPUnit 9 Build Status](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/main.yml?branch=PHPUnit_9&label=Build)](https://github.com/alezhu/phpunit-array-contains-asserts/actions/workflows/main.yml) | [![Coverage Status](https://coveralls.io/repos/github/alezhu/phpunit-array-contains-asserts/badge.svg?branch=PHPUnit_9)](https://coveralls.io/github/alezhu/phpunit-array-contains-asserts?branch=PHPUnit_9) | ![PHP >= 7.3](https://img.shields.io/badge/PHP-%3E%3D%207.3-8892BF) |
+| **PHPUnit 8** | [![PHPUnit 8 Tag](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=8.*&label=v8)](https://github.com/alezhu/phpunit-array-contains-asserts/tree/PHPUnit_8) | [![PHPUnit 8 Build Status](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/main.yml?branch=PHPUnit_8&label=Build)](https://github.com/alezhu/phpunit-array-contains-asserts/actions/workflows/main.yml) | [![Coverage Status](https://coveralls.io/repos/github/alezhu/phpunit-array-contains-asserts/badge.svg?branch=PHPUnit_8)](https://coveralls.io/github/alezhu/phpunit-array-contains-asserts?branch=PHPUnit_8) | ![PHP >= 7.2](https://img.shields.io/badge/PHP-%3E%3D%207.2-8892BF) |
 
 **Table of contents:**
 
