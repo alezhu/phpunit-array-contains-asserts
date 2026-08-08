@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [12.0.0] - 2026-08-08
+
+### Added
+- Support for PHPUnit 12 on PHP 8.3, 8.4, and 8.5.
+- Dedicated `PHPUnit_11` branch for PHPUnit 11 maintenance.
+
+### Changed
+- Require PHP 8.3 or higher.
+- Update test suite constraints and helper methods for PHPUnit 12 compatibility.
+- Update XML schema configuration for PHPUnit 12.
+
 ## [11.0.0] - 2026-08-08
 
 ### Added
