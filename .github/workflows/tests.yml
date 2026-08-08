@@ -10,6 +10,8 @@ jobs:
   build:
     name: PHP ${{ matrix.php }} - PHPUnit ${{ matrix.phpunit }}
     runs-on: ubuntu-latest
+    env:
+      XDEBUG_MODE: coverage
 
     strategy:
       fail-fast: false
