@@ -7,8 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [11.0.0] - 2026-08-08
+
 ### Added
-- Unified GitHub Actions matrix test workflow (`.github/workflows/tests.yml`).
+- Support for PHP 8.4 and PHP 8.5 in test matrix.
+- Reusable GitHub Actions test workflow (`.github/workflows/tests.yml`).
+- Main CI workflow (`.github/workflows/main.yml`) and Release workflow (`.github/workflows/release.yml`).
 - Dependabot configuration (`.github/dependabot.yml`) for Composer and GitHub Actions updates.
 
 ### Removed
