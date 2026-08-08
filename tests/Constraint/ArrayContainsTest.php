@@ -4,7 +4,6 @@ namespace Alezhu\PHPUnitArrayContainsAsserts\Tests\Constraint;
 
 use Alezhu\PHPUnitArrayContainsAsserts\Constraint\ArrayContains;
 use PHPUnit\Framework\AssertionFailedError;
-use PHPUnit\Framework\Constraint\IsType;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
 use SebastianBergmann\Exporter\Exporter;
@@ -37,7 +36,7 @@ class ArrayContainsTest extends TestCase
 
     public function test_matches_assoc_should_be_valid_if_all_expected_values_in_result()
     {
-        $instance = new ArrayContains(["foo" => self::isType(IsType::TYPE_STRING), "bar" => 1]);
+        $instance = new ArrayContains(["foo" => self::isString(), "bar" => 1]);
         $result = $instance->evaluate(["bar" => 1, "foo" => "value", "baz" => true], '', true);
         self::assertTrue($result);
     }
@@ -80,7 +79,7 @@ class ArrayContainsTest extends TestCase
     {
         $this->expectException(ExpectationFailedException::class);
         $result = ["bar" => "value"];
-        $instance = new ArrayContains(["foo" => self::isType(IsType::TYPE_STRING), "bar" => 1]);
+        $instance = new ArrayContains(["foo" => self::isString(), "bar" => 1]);
         $exporter = new Exporter();
         $this->expectExceptionMessage(
             sprintf(
@@ -96,7 +95,7 @@ class ArrayContainsTest extends TestCase
     {
         $this->expectException(ExpectationFailedException::class);
         $result = ["bar" => "value", "foo" => "value"];
-        $instance = new ArrayContains(["foo" => self::isType(IsType::TYPE_STRING), "bar" => 1]);
+        $instance = new ArrayContains(["foo" => self::isString(), "bar" => 1]);
         $exporter = new Exporter();
         $this->expectExceptionMessage(
             sprintf(

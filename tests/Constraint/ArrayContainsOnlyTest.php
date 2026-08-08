@@ -43,7 +43,7 @@ class ArrayContainsOnlyTest extends TestCase
 
     public function test_matches_assoc_should_be_valid_if_all_expected_values_in_result()
     {
-        $instance = new ArrayContainsOnly(["foo" => self::isType("string"), "bar" => 1]);
+        $instance = new ArrayContainsOnly(["foo" => self::isString(), "bar" => 1]);
         $result = $instance->evaluate(["bar" => 1, "foo" => "value"], '', true);
         self::assertTrue($result);
     }

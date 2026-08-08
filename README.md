@@ -9,11 +9,11 @@ Provides PHPUnit assertions to test when array-like data contains expected data 
 
 | PHPUnit Version | Latest Package Release | Build Status | Coverage | PHP Version |
 | :--- | :--- | :--- | :--- | :--- |
-| **PHPUnit 11** | [![PHPUnit 11 Tag](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=11.*&label=v11)](https://github.com/alezhu/phpunit-array-contains-asserts/releases/tag/11.0.0) | [![PHPUnit 11 Build Status](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/main.yml?branch=main&label=Build)](https://github.com/alezhu/phpunit-array-contains-asserts/actions/workflows/main.yml) | [![Coverage Status](https://coveralls.io/repos/github/alezhu/phpunit-array-contains-asserts/badge.svg?branch=main)](https://coveralls.io/github/alezhu/phpunit-array-contains-asserts?branch=main) | ![PHP >= 8.2](https://img.shields.io/badge/PHP-%3E%3D%208.2-8892BF) |
-| **PHPUnit 10** | [![PHPUnit 10 Tag](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=10.*&label=v10)](https://github.com/alezhu/phpunit-array-contains-asserts/releases/tag/10.0.5) | [![PHPUnit 10 Build Status](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/main.yml?branch=main&label=Build)](https://github.com/alezhu/phpunit-array-contains-asserts/actions/workflows/main.yml) | [![Coverage Status](https://coveralls.io/repos/github/alezhu/phpunit-array-contains-asserts/badge.svg?branch=main)](https://coveralls.io/github/alezhu/phpunit-array-contains-asserts?branch=main) | ![PHP >= 8.1](https://img.shields.io/badge/PHP-%3E%3D%208.1-8892BF) |
+| **PHPUnit 12** | [![PHPUnit 12 Tag](https://img.shields.io/github/v/tag/alezhu/phpunit-array-contains-asserts?filter=12.*&label=v12)](https://github.com/alezhu/phpunit-array-contains-asserts/releases/tag/12.0.0) | [![PHPUnit 12 Build Status](https://img.shields.io/github/actions/workflow/status/alezhu/phpunit-array-contains-asserts/main.yml?branch=main&label=Build)](https://github.com/alezhu/phpunit-array-contains-asserts/actions/workflows/main.yml) | [![Coverage Status](https://coveralls.io/repos/github/alezhu/phpunit-array-contains-asserts/badge.svg?branch=main)](https://coveralls.io/github/alezhu/phpunit-array-contains-asserts?branch=main) | ![PHP >= 8.3](https://img.shields.io/badge/PHP-%3E%3D%208.3-8892BF) |
 
 > [!NOTE]
 > For older PHPUnit versions, please use the corresponding branch:
+> - For **PHPUnit 11** and **PHPUnit 10**: Use the [PHPUnit_11 branch](https://github.com/alezhu/phpunit-array-contains-asserts/tree/PHPUnit_11).
 > - For **PHPUnit 9**: Use the [PHPUnit_9 branch](https://github.com/alezhu/phpunit-array-contains-asserts/tree/PHPUnit_9).
 > - For **PHPUnit 8**: Use the [PHPUnit_8 branch](https://github.com/alezhu/phpunit-array-contains-asserts/tree/PHPUnit_8).
 
@@ -76,12 +76,12 @@ Expected and actual data must have same associative kind.
 
 ```php
 use Alezhu\PHPUnitArrayContainsAsserts\Assert;
-use PHPUnit\Framework\Constraint\IsType;
+use PHPUnit\Framework\Assert as PHPUnitAssert;
 
 //Passed
 Assert::assertArrayContains(
     [
-        "foo" => new isType(IsType::TYPE_STRING), 
+        "foo" => PHPUnitAssert::isString(), 
         "baz" => 1
     ], 
     [
@@ -93,7 +93,7 @@ Assert::assertArrayContains(
 //Not Passed
 Assert::assertArrayContains(
     [
-        "foo" => new isType(IsType::TYPE_STRING), 
+        "foo" => PHPUnitAssert::isString(), 
         "baz" => 1
     ], 
     [
@@ -119,12 +119,12 @@ Expected and actual data must have same associative kind.
 
 ```php
 use Alezhu\PHPUnitArrayContainsAsserts\Assert;
-use PHPUnit\Framework\Constraint\IsType;
+use PHPUnit\Framework\Assert as PHPUnitAssert;
 
 //Passed
 Assert::assertArrayContainsOnly(
     [
-        "foo" => new isType(IsType::TYPE_STRING), 
+        "foo" => PHPUnitAssert::isString(), 
         "baz" => 1
     ], 
     [
@@ -135,7 +135,7 @@ Assert::assertArrayContainsOnly(
 //Not Passed
 Assert::assertArrayContainsOnly(
     [
-        "foo" => new isType(IsType::TYPE_STRING), 
+        "foo" => PHPUnitAssert::isString(), 
         "baz" => 1
     ], 
     [

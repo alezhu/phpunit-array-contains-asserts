@@ -17,38 +17,16 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # PHPUnit 11 (compatible with PHP 8.2, 8.3, 8.4, 8.5)
-          - branch: main
-            php: '8.2'
-            phpunit: '11'
-          - branch: main
-            php: '8.3'
-            phpunit: '11'
-          - branch: main
-            php: '8.4'
-            phpunit: '11'
-          - branch: main
-            php: '8.5'
-            phpunit: '11'
-
-          # PHPUnit 10 (compatible with PHP 8.1, 8.2, 8.3, 8.4)
-          - branch: main
-            php: '8.1'
-            phpunit: '10'
-          - branch: main
-            php: '8.2'
-            phpunit: '10'
-          - branch: main
-            php: '8.3'
-            phpunit: '10'
-          - branch: main
-            php: '8.4'
-            phpunit: '10'
+          # PHPUnit 12 (compatible with PHP 8.3, 8.4, 8.5)
+          - php: '8.3'
+            phpunit: '12'
+          - php: '8.4'
+            phpunit: '12'
+          - php: '8.5'
+            phpunit: '12'
 
     steps:
       - uses: actions/checkout@v5
-        with:
-          ref: ${{ matrix.branch }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2

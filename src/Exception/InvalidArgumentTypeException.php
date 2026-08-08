@@ -10,7 +10,7 @@ class InvalidArgumentTypeException extends InvalidArgumentException
     public function __construct(
         protected int    $argument,
         protected string $type,
-        Throwable        $previous = null
+        ?Throwable       $previous = null
     )
     {
         parent::__construct(
@@ -20,9 +20,9 @@ class InvalidArgumentTypeException extends InvalidArgumentException
     }
 
     public static function create(
-        int       $argument,
-        string    $type,
-        Throwable $previous = null
+        int        $argument,
+        string     $type,
+        ?Throwable $previous = null
     ): static
     {
         return new static($argument, $type, $previous);
