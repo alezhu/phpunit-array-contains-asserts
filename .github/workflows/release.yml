@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v5
 
       - name: Extract Release Notes from CHANGELOG.md
         run: |
@@ -34,8 +34,9 @@ jobs:
           ' CHANGELOG.md > RELEASE_NOTES.md
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v3
+        uses: softprops/action-gh-release@v2
         with:
           body_path: RELEASE_NOTES.md
+          make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
