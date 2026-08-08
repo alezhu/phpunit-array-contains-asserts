@@ -1,11 +1,7 @@
 name: Test Suite
 
 on:
-  push:
-    branches: [ "main", "PHPUnit_8", "PHPUnit_9" ]
-    tags: [ "*.*", "v*.*" ]
-  pull_request:
-    branches: [ "main", "PHPUnit_8", "PHPUnit_9" ]
+  workflow_call:
 
 permissions:
   contents: read
