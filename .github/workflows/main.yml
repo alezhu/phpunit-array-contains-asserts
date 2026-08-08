@@ -2,13 +2,13 @@ name: CI
 
 on:
   push:
-    branches: [ "main", "PHPUnit_8", "PHPUnit_9" ]
+    branches: [ "main" ]
     paths-ignore:
       - '**.md'
       - '.gitignore'
       - 'LICENSE'
   pull_request:
-    branches: [ "main", "PHPUnit_8", "PHPUnit_9" ]
+    branches: [ "main" ]
     paths-ignore:
       - '**.md'
       - '.gitignore'

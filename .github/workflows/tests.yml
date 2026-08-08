@@ -43,31 +43,6 @@ jobs:
             php: '8.4'
             phpunit: '10'
 
-          # PHPUnit 9 (compatible with PHP 7.3, 7.4, 8.0, 8.1)
-          - branch: PHPUnit_9
-            php: '7.3'
-            phpunit: '9'
-          - branch: PHPUnit_9
-            php: '7.4'
-            phpunit: '9'
-          - branch: PHPUnit_9
-            php: '8.0'
-            phpunit: '9'
-          - branch: PHPUnit_9
-            php: '8.1'
-            phpunit: '9'
-
-          # PHPUnit 8 (compatible with PHP 7.2, 7.3, 7.4)
-          - branch: PHPUnit_8
-            php: '7.2'
-            phpunit: '8'
-          - branch: PHPUnit_8
-            php: '7.3'
-            phpunit: '8'
-          - branch: PHPUnit_8
-            php: '7.4'
-            phpunit: '8'
-
     steps:
       - uses: actions/checkout@v5
         with:
