@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   build:
-    name: PHP ${{ matrix.php }} (${{ matrix.branch }})
+    name: PHP ${{ matrix.php }} / PHPUnit ${{ matrix.phpunit }}
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,18 +16,23 @@ jobs:
       matrix:
         include:
           - branch: main
-            php: '8.1'
+            php: '8.3'
+            phpunit: '11'
           - branch: main
             php: '8.2'
+            phpunit: '10'
           - branch: main
-            php: '8.3'
+            php: '8.1'
+            phpunit: '10'
           - branch: PHPUnit_9
             php: '7.3'
+            phpunit: '9'
           - branch: PHPUnit_8
             php: '7.2'
+            phpunit: '8'
 
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v5
         with:
           ref: ${{ matrix.branch }}
 
@@ -39,20 +44,23 @@ jobs:
       - name: Check PHP Version
         run: php -v
 
-      - name: Validate composer.json and composer.lock
+      - name: Require specific PHPUnit version
+        run: composer require --dev "phpunit/phpunit:^${{ matrix.phpunit }}" --no-update --no-interaction
+
+      - name: Validate composer.json
         run: composer validate --strict
 
       - name: Cache Composer packages
         id: composer-cache
-        uses: actions/cache@v6
+        uses: actions/cache@v5
         with:
           path: vendor
-          key: ${{ runner.os }}-php-${{ matrix.php }}-${{ hashFiles('**/composer.lock') }}
+          key: ${{ runner.os }}-php-${{ matrix.php }}-phpunit-${{ matrix.phpunit }}-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
-            ${{ runner.os }}-php-${{ matrix.php }}-
+            ${{ runner.os }}-php-${{ matrix.php }}-phpunit-${{ matrix.phpunit }}-
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
+        run: composer update --prefer-dist --no-progress
 
       - name: Run test suite
         run: composer run-script coverage
