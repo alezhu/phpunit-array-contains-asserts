@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [13.0.0] - 2026-08-09
+
+### Added
+- Support for PHPUnit 13 on PHP 8.4 and 8.5.
+
 ## [12.0.0] - 2026-08-08
 
 ### Added
