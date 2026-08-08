@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # PHPUnit 11 (compatible with PHP 8.2, 8.3, 8.4)
+          # PHPUnit 11 (compatible with PHP 8.2, 8.3, 8.4 on main branch)
           - branch: main
             php: '8.2'
             phpunit: '11'
@@ -26,7 +26,7 @@ jobs:
             php: '8.4'
             phpunit: '11'
 
-          # PHPUnit 10 (compatible with PHP 8.1, 8.2, 8.3)
+          # PHPUnit 10 (compatible with PHP 8.1, 8.2, 8.3 on main branch)
           - branch: main
             php: '8.1'
             phpunit: '10'
@@ -37,29 +37,14 @@ jobs:
             php: '8.3'
             phpunit: '10'
 
-          # PHPUnit 9 (compatible with PHP 7.3, 7.4, 8.0, 8.1)
+          # PHPUnit 9 (PHP 7.3 on PHPUnit_9 branch)
           - branch: PHPUnit_9
             php: '7.3'
-            phpunit: '9'
-          - branch: PHPUnit_9
-            php: '7.4'
-            phpunit: '9'
-          - branch: PHPUnit_9
-            php: '8.0'
-            phpunit: '9'
-          - branch: PHPUnit_9
-            php: '8.1'
             phpunit: '9'
 
-          # PHPUnit 8 (compatible with PHP 7.2, 7.3, 7.4)
+          # PHPUnit 8 (PHP 7.2 on PHPUnit_8 branch)
           - branch: PHPUnit_8
             php: '7.2'
-            phpunit: '8'
-          - branch: PHPUnit_8
-            php: '7.3'
-            phpunit: '8'
-          - branch: PHPUnit_8
-            php: '7.4'
             phpunit: '8'
 
     steps:
@@ -76,7 +61,10 @@ jobs:
         run: php -v
 
       - name: Require specific PHPUnit version
-        run: composer require --dev "phpunit/phpunit:^${{ matrix.phpunit }}" --no-update --no-interaction --ignore-platform-req=php
+        run: composer require --dev "phpunit/phpunit:^${{ matrix.phpunit }}" --no-update --no-interaction
+
+      - name: Validate composer.json
+        run: composer validate --strict
 
       - name: Cache Composer packages
         id: composer-cache
@@ -88,7 +76,7 @@ jobs:
             ${{ runner.os }}-php-${{ matrix.php }}-phpunit-${{ matrix.phpunit }}-
 
       - name: Install dependencies
-        run: composer update --prefer-dist --no-progress --ignore-platform-req=php
+        run: composer update --prefer-dist --no-progress
 
       - name: Run test suite
         run: composer run-script coverage
