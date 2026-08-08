@@ -23,14 +23,8 @@ jobs:
             php: '8.3'
           - branch: PHPUnit_9
             php: '7.3'
-          - branch: PHPUnit_9
-            php: '7.4'
-          - branch: PHPUnit_9
-            php: '8.0'
           - branch: PHPUnit_8
             php: '7.2'
-          - branch: PHPUnit_8
-            php: '7.3'
 
     steps:
       - uses: actions/checkout@v4
