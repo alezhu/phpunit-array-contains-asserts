@@ -17,6 +17,12 @@ jobs:
       fail-fast: false
       matrix:
         include:
+          # PHPUnit 13 (compatible with PHP 8.4, 8.5)
+          - php: '8.4'
+            phpunit: '13'
+          - php: '8.5'
+            phpunit: '13'
+
           # PHPUnit 12 (compatible with PHP 8.3, 8.4, 8.5)
           - php: '8.3'
             phpunit: '12'
