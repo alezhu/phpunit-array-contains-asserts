@@ -51,7 +51,7 @@ jobs:
 
       - name: Cache Composer packages
         id: composer-cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: vendor
           key: ${{ runner.os }}-php-${{ matrix.php }}-phpunit-${{ matrix.phpunit }}-${{ hashFiles('**/composer.lock') }}
